@@ -6,7 +6,7 @@ public class Move_Vroomba : MonoBehaviour
 {
 	//attached to Vroomba GO
 
-	public Text textData;
+	public Text coordinateData;
 	public float goSpeed;
 	private Vector2 touchOrigin = -Vector2.one; //starts origin off screen
 	public Rigidbody2D rb2D;
@@ -32,7 +32,7 @@ public class Move_Vroomba : MonoBehaviour
 			if (myTouch.phase == TouchPhase.Began || myTouch.phase == TouchPhase.Moved || myTouch.phase == TouchPhase.Stationary)
 			{
 				touchOrigin = myTouch.position;
-				textData.text = "x value is: " + touchOrigin.x.ToString() + "\ny value is: " + touchOrigin.y.ToString();
+				coordinateData.text = "x value is: " + touchOrigin.x.ToString() + "\ny value is: " + touchOrigin.y.ToString();
 
 				Move();
 			}
